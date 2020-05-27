@@ -1,7 +1,17 @@
-h1{display: inline-block;}
+h1.hidertext{
+    display: inline-block;
+}
+html.hiderhtml{
+    height: max-content;
+    width: max-content;
+}
+body.hiderbody{
+    height: max-content;
+    width: max-content;
+}
 .switch {
     position: absolute;
-    margin: 24 0 0 30;
+    margin: 15 0 0 30;
     display: inline-block;
     width: 60px;
     height: 34px;

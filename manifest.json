@@ -12,7 +12,7 @@
                 "script.js"
             ],
             "matches": [
-                "*://https://twitter.com/home"
+                "https://twitter.com/home"
             ]
         }
     ],
