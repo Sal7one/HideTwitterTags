@@ -3,16 +3,17 @@ h1.hidertext{
 }
 html.hiderhtml{
     height: max-content;
-    width: max-content;
+    width: 385px;
 }
 body.hiderbody{
     height: max-content;
     width: max-content;
 }
 .switch {
-    position: absolute;
-    margin: 15 0 0 30;
     display: inline-block;
+    margin-left: 15;
+    margin-top: 20;
+    position: absolute;
     width: 60px;
     height: 34px;
   }
