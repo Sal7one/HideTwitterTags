@@ -12,8 +12,10 @@
                 "script.js"
             ],
             "matches": [
-                "https://twitter.com/home"
-            ]
+                "https://twitter.com/home",
+                "http://www.twitter.com/home"
+            ],
+            "run_at": "document_end"
         }
     ],
     "browser_action": {
