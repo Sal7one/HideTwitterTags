@@ -1,21 +1,26 @@
 {
     "manifest_version": 2,
     "name": "Twitter options",
-    "version": "0.2.0",
+    "version": "0.2.3",
     "description": "Hides tags and who to follow ",
     "content_scripts": [
         {
             "css": [
                 "styles.css"
             ],
+            "js": [
+                "script.js"
+            ],
             "matches": [
                 "https://twitter.com/home",
                 "http://www.twitter.com/home"
-            ],
-            "run_at": "document_end"
+            ]
         }
     ],
     "browser_action": {
         "default_popup": "ui.html"
-    }
+    },
+    "permissions": [
+        "storage"
+    ]
 }

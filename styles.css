@@ -1,3 +1,6 @@
+:root{
+  --status: inline;
+}
 h1.hidertext{
     display: inline-block;
 }
@@ -71,5 +74,5 @@ body.hiderbody{
     border-radius: 50%;
   }
   .r-1l5qxre{
-    display: none !important;
+    display: var(--status) !important;
   }
