@@ -50,7 +50,7 @@ function hidethem() {
 
   Set("hidden")
   swtch.setAttribute("checked", true)
-window.re
+
 }
 function showthem() {
   root.style.setProperty('--status', 'inline')
