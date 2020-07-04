@@ -7,7 +7,7 @@
     {
       "css": ["styles.css"],
       "js": ["script.js"],
-      "matches": ["https://twitter.com/*", "http://www.twitter.com/*"]
+      "matches": ["https://twitter.com/*"]
     }
   ],
   "browser_action": {
