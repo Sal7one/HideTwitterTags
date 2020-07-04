@@ -1,30 +1,21 @@
 {
-    "manifest_version": 2,
-    "name": "Twitter options",
-    "version": "0.2.4",
-    "description": "Hides tags and who to follow",
-    "content_scripts": [
-        {
-            "css": [
-                "styles.css"
-            ],
-            "js": [
-                "script.js"
-            ],
-            "matches": [
-                "https://twitter.com/home",
-                "http://www.twitter.com/home"
-            ]
-        }
-    ],
-    "browser_action": {
-        "default_popup": "ui.html"
-    },
-    "permissions": [
-        "storage"
-    ],
-    "icons": {
-        "48": "icon48.png",
-        "128": "icon128.png"
+  "manifest_version": 2,
+  "name": "Twitter options",
+  "version": "0.2.4",
+  "description": "Hides tags and who to follow",
+  "content_scripts": [
+    {
+      "css": ["styles.css"],
+      "js": ["script.js"],
+      "matches": ["https://twitter.com/*", "http://www.twitter.com/*"]
     }
+  ],
+  "browser_action": {
+    "default_popup": "ui.html"
+  },
+  "permissions": ["storage", "cookies", "*://*.twitter.com/*"],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
 }
