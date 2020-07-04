@@ -8,7 +8,7 @@ Hide Annoying tags
 
 You can show or hide them with a button
 
-Your prefrence will be saved in memory
+Your preference will be saved in memory
 
 It's made by me 💅
 
