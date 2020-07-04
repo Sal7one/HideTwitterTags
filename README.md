@@ -1,6 +1,18 @@
 # HideTwitterTags
 Hide Twitter Tags and news (What’s happening) + Who to follow 
 
+# Features
+
+
+Hide Annoying tags
+
+You can show or hide them with a button
+
+Your prefrence will be saved in memory
+
+It's made by me 💅
+
+
 
 # How to use
 
