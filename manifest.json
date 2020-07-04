@@ -13,7 +13,7 @@
   "browser_action": {
     "default_popup": "ui.html"
   },
-  "permissions": ["storage", "cookies", "*://*.twitter.com/*"],
+  "permissions": ["storage", "cookies"],
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
