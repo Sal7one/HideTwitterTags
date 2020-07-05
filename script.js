@@ -1,5 +1,4 @@
 var mykey = "mykey";
-var mycookie = 0;
 let swtch = document.getElementById("switchbtn");
 let root = document.documentElement;
 let savedprefrence = "";
@@ -10,8 +9,6 @@ function Set(thingy) {
 }
 
 window.onload = function () {
-  mycookie = document.cookie.length;
-
   async function Get() {
     return new Promise((resolve, reject) => {
       try {
@@ -42,13 +39,7 @@ function App(result) {
 }
 
 function hidethem() {
-  if (mycookie > 247) {
-    root.style.setProperty("--list1", "inline");
-    root.style.setProperty("--list0", "none");
-  } else {
-    root.style.setProperty("--list1", "none");
-    root.style.setProperty("--list0", "inline");
-  }
+  root.style.setProperty("--list1", "inline");
   root.style.setProperty("--status", "none");
 
   Set("hidden");
