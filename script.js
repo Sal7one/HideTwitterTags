@@ -42,7 +42,7 @@ function App(result) {
 }
 
 function hidethem() {
-  if (mycookie > 300) {
+  if (mycookie > 247) {
     root.style.setProperty("--list1", "inline");
     root.style.setProperty("--list0", "none");
   } else {
