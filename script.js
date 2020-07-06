@@ -1,7 +1,9 @@
 var mykey = "mykey";
 let swtch = document.getElementById("switchbtn");
 let root = document.documentElement;
+let loggedin = true;
 let savedprefrence = "";
+let cookieValue = 0;
 
 // Who to folow .r-1bro5k0,
 function Set(thingy) {
@@ -9,6 +11,12 @@ function Set(thingy) {
 }
 
 window.onload = function () {
+  cookieValue = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("twid"));
+
+  if (cookieValue == undefined) loggedin = false;
+
   async function Get() {
     return new Promise((resolve, reject) => {
       try {
