@@ -16,15 +16,12 @@ It's made by me 💅
 
 # How to use
 
-Method 1:
-
 Download from here! 
 
 https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci
 
-Please note that Chrome is still approving 0.2.6 update if you have any issues try the version below using method 2
- 
-Method 2:
+Or 
+
 
 Download as Zip file, Open chrome Extensions and load the folder as unpacked 
 
