@@ -1,34 +1,51 @@
-var mykey = "mykey";
 var loggedin = true;
 let swtch = document.getElementById("switchbtn");
 let root = document.documentElement;
 let home = "https://twitter.com/home";
+var allofthem = "allofthem";
+var tags = "tags";
+var whotofollow = "whotofollow";
+var relventppl = "relventppl";
+var footer = "footer";
+var signup = "signup";
 let savedprefrence = "";
-let cookieValue = 0;
-
-cookieValue = document.cookie.split("; ").find((row) => row.startsWith("twid"));
-
-if (cookieValue == undefined) loggedin = false;
 
 // Who to folow .r-1bro5k0,
-function Set(thingy) {
-  chrome.storage.local.set({ mykey: thingy });
+function Set(keys, thingy) {
+  chrome.storage.local.set({ keys: thingy });
 }
 
 window.onload = function () {
   async function Get() {
     return new Promise((resolve, reject) => {
       try {
-        chrome.storage.local.get(mykey, function (value) {
-          resolve(value.mykey);
+        let results = [];
+        chrome.storage.local.get(allofthem, function (value) {
+          results[0] = value.allofthem;
         });
+        chrome.storage.local.get(tags, function (value) {
+          results[1] = value.tags;
+        });
+        chrome.storage.local.get(whotofollow, function (value) {
+          results[2] = value.whotofollow;
+        });
+        chrome.storage.local.get(relventppl, function (value) {
+          results[3] = value.relventppl;
+        });
+        chrome.storage.local.get(footer, function (value) {
+          results[4] = value.footer;
+        });
+        chrome.storage.local.get(signup, function (value) {
+          results[5] = value.signup;
+        });
+        resolve(results);
       } catch (ex) {
         reject(ex);
       }
     });
   }
 
-  Get(mykey).then((result) => {
+  Get(allofthem).then((result) => {
     // result is here
     App(result);
   });
@@ -45,26 +62,14 @@ function App(result) {
   }
 }
 
-function hidethem() {
-  if (window.loggedin) {
-    root.style.setProperty("--list1", "inline");
-    if (window.location == home) root.style.setProperty("--list0", "none");
-    else root.style.setProperty("--list0", "inline");
-  } else {
-    root.style.setProperty("--list1", "none");
-    root.style.setProperty("--list0", "inline");
-  }
-  root.style.setProperty("--status", "none");
-
-  Set("hidden");
+function hidethem(key) {
+  Set(key, "hidden");
   swtch.setAttribute("checked", true);
 }
-function showthem() {
-  root.style.setProperty("--list1", "inline");
-  root.style.setProperty("--list0", "inline");
-  root.style.setProperty("--status", "inline");
+function showthem(key) {
+  //  root.style.setProperty("--status", "inline");
 
-  Set("shown");
+  Set(key, "shown");
   swtch.setAttribute("unchecked", true);
 }
 
