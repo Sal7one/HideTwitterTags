@@ -11,8 +11,8 @@ var signup = "signup";
 let savedprefrence = "";
 
 // Who to folow .r-1bro5k0,
-function Set(keys, thingy) {
-  chrome.storage.local.set({ keys: thingy });
+function Set(key, thingy) {
+  chrome.storage.local.set({ [key]: thingy });
 }
 
 window.onload = function () {
@@ -34,9 +34,6 @@ window.onload = function () {
         });
         chrome.storage.local.get(footer, function (value) {
           results[4] = value.footer;
-        });
-        chrome.storage.local.get(signup, function (value) {
-          results[5] = value.signup;
         });
         resolve(results);
       } catch (ex) {

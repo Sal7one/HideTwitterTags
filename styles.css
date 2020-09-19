@@ -2,17 +2,29 @@
   --tags: inline;
   --whotofollow: inline;
   --footer: inline;
+  --relvppl: inline;
+}
+.Salsinfo {
+  color: white;
 }
 h1.hidertext {
   display: inline-block;
   font-size: 1rem;
+  color: white;
+}
+.salslist {
+  min-width: 540px;
+  text-align: center;
+  padding: 5px;
+  border-color: white;
+  border-style: solid;
 }
 html.hiderhtml {
   height: max-content;
 }
 body.hiderbody {
-  height: max-content;
-  width: max-content;
+  min-width: 420px;
+  background-color: rgb(77, 20, 131);
 }
 .switch {
   display: inline-block;
@@ -54,11 +66,11 @@ body.hiderbody {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #f32121;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #f32121;
 }
 
 input:checked + .slider:before {
@@ -88,3 +100,6 @@ input:checked + .slider:before {
   display: var(--footer) !important ;
 }
 
+[aria-label="Relevant people"] {
+  display: var(--relvppl) !important ;
+}
