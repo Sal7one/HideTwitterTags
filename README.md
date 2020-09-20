@@ -1,5 +1,5 @@
 # HideTwitterTags
-Hide Twitter Tags and news (What’s happening) + Who to follow 
+Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer
 
 # Features
 
