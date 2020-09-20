@@ -7,6 +7,7 @@ var whotofollow = "whotofollow";
 var relventppl = "relventppl";
 var footer = "footer";
 let savedprefrence = "";
+let keey = "";
 
 // Who to folow .r-1bro5k0,
 function Set(key, thingy) {
@@ -34,42 +35,44 @@ window.onload = function () {
 
 function App(result) {
   savedprefrence = result;
+  keey = [tags, whotofollow, relventppl, footer];
   NumofSavedValues = savedprefrence.length;
 
   for (i = 0; i < NumofSavedValues; i++) {
     if (savedprefrence[i] == "shown") {
-      root.style.setProperty(`--none`, savedprefrence[i]);
+      try {
+        mybtns[i].setAttribute("unchecked", true);
+      } catch (error) {}
+      changestatus(keey[i], "shown");
     } else {
-      root.style.setProperty(`--none`, savedprefrence[i]);
+      try {
+        mybtns[i].setAttribute("checked", true);
+      } catch (error) {}
+      changestatus(keey[i], "hidden");
     }
   }
 }
 
-function changestatus(element, status) {
-  let key = element.getAttribute("id");
-  let styletype = "none";
-  let savedvalue = "hidden";
-  let attribute = "checked";
-  if (status == "show") {
-    styletype = "inline";
-    attribute = "unchecked";
-    savedvalue = "shown";
+function changestatus(key, status) {
+  if (status == "shown") {
+    root.style.setProperty(`--${key}`, "inline");
+    Set(key, "shown");
+  } else {
+    root.style.setProperty(`--${key}`, "none");
+    Set(key, "hidden");
   }
-  try {
-    element.setAttribute(attribute, true);
-    root.style.setProperty(`--${key}`, styletype);
-    Set(key, savedvalue);
-    refresh();
-  } catch (error) {}
 }
 
 mybtns.forEach((element) => {
+  let myid = element.getAttribute("id");
   element.addEventListener("click", function () {
     if (element.checked) {
-      changestatus(element, "hide");
+      element.setAttribute("checked", true);
+      changestatus(myid, "hidden");
       refresh();
     } else {
-      changestatus(element, "show");
+      element.setAttribute("unchecked", true);
+      changestatus(myid, "shown");
       refresh();
     }
   });

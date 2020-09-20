@@ -1,8 +1,8 @@
 :root {
   --tags: inline;
   --whotofollow: inline;
-  --footer: inline;
   --relventppl: inline;
+  --footer: inline;
 }
 .Salsinfo {
   color: white;
@@ -89,17 +89,17 @@ input:checked + .slider:before {
 }
 
 [aria-label="Timeline: Trending now"] {
-  display: var(--tags) !important ;
+  display: var(--tags) !important;
 }
 
 .r-1bro5k0 {
-  display: var(--whotofollow) !important ;
+  display: var(--whotofollow) !important;
 }
 
 [aria-label="Footer"] {
-  display: var(--footer) !important ;
+  display: var(--footer) !important;
 }
 
 [aria-label="Relevant people"] {
-  display: var(--relventppl) !important ;
+  display: var(--relventppl) !important;
 }
