@@ -2,7 +2,7 @@
   --tags: inline;
   --whotofollow: inline;
   --footer: inline;
-  --relvppl: inline;
+  --relventppl: inline;
 }
 .Salsinfo {
   color: white;
@@ -101,5 +101,5 @@ input:checked + .slider:before {
 }
 
 [aria-label="Relevant people"] {
-  display: var(--relvppl) !important ;
+  display: var(--relventppl) !important ;
 }
