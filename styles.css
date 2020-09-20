@@ -1,26 +1,38 @@
 :root {
-  --status: inline;
-  --list0: inline;
-  --list1: inline;
+  --tags: inline;
+  --whotofollow: inline;
+  --relventppl: inline;
+  --footer: inline;
+}
+.Salsinfo {
+  color: white;
 }
 h1.hidertext {
   display: inline-block;
+  font-size: 1rem;
+  color: white;
+}
+.salslist {
+  min-width: 540px;
+  text-align: center;
+  padding: 5px;
+  border-color: white;
+  border-style: solid;
 }
 html.hiderhtml {
   height: max-content;
-  width: 385px;
 }
 body.hiderbody {
-  height: max-content;
-  width: max-content;
+  min-width: 420px;
+  background-color: rgb(77, 20, 131);
 }
 .switch {
   display: inline-block;
   margin-left: 15;
-  margin-top: 20;
+  margin-top: 15;
   position: absolute;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 14px;
 }
 
 .switch input {
@@ -44,27 +56,27 @@ body.hiderbody {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 10px;
+  width: 9px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #f32121;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #f32121;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
 }
 
 /* Rounded sliders */
@@ -75,22 +87,19 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+[aria-label="Timeline: Trending now"] {
+  display: var(--tags) !important;
+}
+
 .r-1bro5k0 {
-  display: var(--status) !important ;
+  display: var(--whotofollow) !important;
 }
 
 [aria-label="Footer"] {
-  display: var(--status) !important ;
+  display: var(--footer) !important;
 }
 
-.r-1uhd6vh {
-  display: var(--status) !important ;
-}
-
-[aria-labelledby="accessible-list-0"] {
-  display: var(--list0) !important ;
-}
-
-[aria-labelledby="accessible-list-1"] {
-  display: var(--list1) !important ;
+[aria-label="Relevant people"] {
+  display: var(--relventppl) !important;
 }

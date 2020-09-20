@@ -1,22 +1,56 @@
 <html class="hiderhtml">
-
-<head>
-
+  <head>
     <title>Twitter options</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body class="hiderbody">
-    <div>
-        <h1 class="hidertext">Hide them</h1>
-        <label id="btn" class="switch">
-            <input id="switchbtn" type="checkbox">
-            <span class="slider round"></span>
-        </label>
-
+  <body class="hiderbody">
+    <div class="salslist">
+      <h1 class="hidertext">Hide Tags</h1>
+      <label id="btn" class="switch">
+        <input id="tags" type="checkbox" data-num="0" />
+        <span class="slider round"></span>
+      </label>
     </div>
-
+    <div class="salslist">
+      <h1 class="hidertext">Hide Who to follow</h1>
+      <label id="btn" class="switch">
+        <input id="whotofollow" type="checkbox" data-num="1" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="salslist">
+      <h1 class="hidertext">Hide relevant people (inside tweets)</h1>
+      <label id="btn" class="switch">
+        <input id="relventppl" type="checkbox" data-num="2" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="salslist">
+      <h1 class="hidertext">Hide footer (Twitter info)</h1>
+      <label id="btn" class="switch">
+        <input id="footer" type="checkbox" data-num="3" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="salslist" style="background-color: #ffd700">
+      <h1 class="hidertext" style="color: red; font-size: 24px">
+        Contact Dev: &nbsp; &nbsp;
+        <a
+          href="https://github.com/Sal7one"
+          target="_newtab"
+          style="color: black; font-size: 24px"
+          >Github</a
+        >
+        &nbsp;
+        <a
+          href="https://twitter.com/Sal_7one"
+          target="_newtab"
+          style="color: black; font-size: 24px"
+          >Twitter</a
+        >
+      </h1>
+    </div>
     <script type="text/javascript" src="script.js" defer></script>
-</body>
-
+  </body>
 </html>
