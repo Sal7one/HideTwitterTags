@@ -7,7 +7,6 @@ var footer = "footer";
 let savedprefrence = "";
 let keey = "";
 
-// Who to folow .r-1bro5k0,
 function Set(key, thingy) {
   chrome.storage.local.set({ [key]: [thingy] });
 }
