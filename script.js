@@ -62,11 +62,7 @@ function changepagestatus(key, status) {
 }
 
 function changesavedvalue(key, status) {
-  if (status == "shown") {
-    Set(key, "shown");
-  } else {
-    Set(key, "hidden");
-  }
+  Set(key, status);
 }
 
 mybtns.forEach((element) => {
@@ -74,11 +70,11 @@ mybtns.forEach((element) => {
   element.addEventListener("click", function () {
     if (element.checked) {
       element.setAttribute("checked", true);
-      changesavedvalue(myid, "hidden");
+      Set(myid, "hidden");
       refresh();
     } else {
       element.setAttribute("unchecked", true);
-      changesavedvalue(myid, "shown");
+      Set(myid, "shown");
       refresh();
     }
   });
