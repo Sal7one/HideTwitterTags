@@ -1,7 +1,5 @@
-var loggedin = true;
 let mybtns = document.querySelectorAll("[data-num]");
 let root = document.documentElement;
-let home = "https://twitter.com/home";
 var tags = "tags";
 var whotofollow = "whotofollow";
 var relventppl = "relventppl";
@@ -61,19 +59,13 @@ function changepagestatus(key, status) {
   }
 }
 
-function changesavedvalue(key, status) {
-  Set(key, status);
-}
-
 mybtns.forEach((element) => {
   let myid = element.getAttribute("id");
   element.addEventListener("click", function () {
     if (element.checked) {
-      element.setAttribute("checked", true);
       Set(myid, "hidden");
       refresh();
     } else {
-      element.setAttribute("unchecked", true);
       Set(myid, "shown");
       refresh();
     }
