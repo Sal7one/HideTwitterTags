@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Twitter tags hider",
-  "version": "1.2.5",
+  "version": "1.2.7",
   "description": "Hides tags and who to follow",
   "content_scripts": [
     {
