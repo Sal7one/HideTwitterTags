@@ -10,8 +10,7 @@ You can show or hide them with a button
 
 Your preference will be saved in memory
   
-  New:
-    It works in Profile pages and without a Twitter account now!
+ It works in Profile pages and without a Twitter account.
  
  It now works with Twitter footer, who to follow and relevant people (inside tweets) 
 
