@@ -43,22 +43,28 @@ function App(result) {
       try {
         mybtns[i].setAttribute("unchecked", true);
       } catch (error) {}
-      changestatus(keey[i], "shown");
+      changepagestatus(keey[i], "shown");
     } else {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
-      changestatus(keey[i], "hidden");
+      changepagestatus(keey[i], "hidden");
     }
   }
 }
 
-function changestatus(key, status) {
+function changepagestatus(key, status) {
   if (status == "shown") {
     root.style.setProperty(`--${key}`, "inline");
-    Set(key, "shown");
   } else {
     root.style.setProperty(`--${key}`, "none");
+  }
+}
+
+function changesavedvalue(key, status) {
+  if (status == "shown") {
+    Set(key, "shown");
+  } else {
     Set(key, "hidden");
   }
 }
@@ -68,11 +74,11 @@ mybtns.forEach((element) => {
   element.addEventListener("click", function () {
     if (element.checked) {
       element.setAttribute("checked", true);
-      changestatus(myid, "hidden");
+      changesavedvalue(myid, "hidden");
       refresh();
     } else {
       element.setAttribute("unchecked", true);
-      changestatus(myid, "shown");
+      changesavedvalue(myid, "shown");
       refresh();
     }
   });
