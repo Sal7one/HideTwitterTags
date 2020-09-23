@@ -4,48 +4,41 @@ var tags = "tags";
 var whotofollow = "whotofollow";
 var relventppl = "relventppl";
 var footer = "footer";
-let savedprefrence = "";
+var savedvalues = "";
 let keey = "";
 
-function Set(key, thingy) {
-  chrome.storage.local.set({ [key]: [thingy] });
-}
-
 window.onload = function () {
-  var savedvalues = [];
-
-  function printme(i, values) {
-    savedvalues[i] = values;
-
-    if (savedvalues.length == 4) App(savedvalues);
-  }
-  function Get(num, key, mycall) {
-    chrome.storage.local.get(key, function (items) {
-      return mycall(num, items[key]);
-    });
-  }
-  Get(0, tags, printme);
-  Get(1, whotofollow, printme);
-  Get(2, relventppl, printme);
-  Get(3, footer, printme);
+  Get().then((value) => {
+    App(value);
+  });
 };
 
 function App(result) {
-  savedprefrence = result;
+  savedvalues = result;
   keey = [tags, whotofollow, relventppl, footer];
-  NumofSavedValues = savedprefrence.length;
+  NumofSavedValues = savedvalues.length;
 
-  for (i = 0; i < NumofSavedValues; i++) {
-    if (savedprefrence[i] == "shown") {
-      try {
-        mybtns[i].setAttribute("unchecked", true);
-      } catch (error) {}
-      changepagestatus(keey[i], "shown");
-    } else {
+  if (NumofSavedValues > 0) {
+    for (i = 0; i < NumofSavedValues; i++) {
+      if (savedvalues[i] == "shown") {
+        try {
+          mybtns[i].setAttribute("unchecked", true);
+        } catch (error) {}
+        changepagestatus(keey[i], "shown");
+      } else {
+        try {
+          mybtns[i].setAttribute("checked", true);
+        } catch (error) {}
+        changepagestatus(keey[i], "hidden");
+      }
+    }
+  } else {
+    for (i = 0; i < 4; i++) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
       changepagestatus(keey[i], "hidden");
+      Set(keey[i], "hidden");
     }
   }
 }
@@ -75,4 +68,20 @@ function refresh() {
   chrome.tabs.getSelected(null, function (tab) {
     chrome.tabs.reload(tab.id);
   });
+}
+
+function Get() {
+  return new Promise(function (resolve, _reject) {
+    chrome.storage.local.get(null, function (items) {
+      let values = [];
+      values[0] = items[tags];
+      values[1] = items[whotofollow];
+      values[2] = items[relventppl];
+      values[3] = items[footer];
+      resolve(values);
+    });
+  });
+}
+function Set(key, thingy) {
+  chrome.storage.local.set({ [key]: [thingy] });
 }
