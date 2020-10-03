@@ -13,9 +13,11 @@ Hide Twitter Tags and news (What’s happening) + Who to follow + relevant peopl
      [Source code](https://github.com/Sal7one/HideTwitterTags/tree/firefoxverison)
      
    Operating system and build environment requirements.
+   
     Any firefox browser 
    
    Details (including required version and installation instructions), of any programs used in the build process (for example: node and npm version used).
+   
     Nothing needed 
 
 
