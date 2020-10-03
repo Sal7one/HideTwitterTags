@@ -45,5 +45,5 @@ It's made by me 💅
    
    OR
    
-   Download as zip.. install in firefox.. ADD ON Store link will be here once published.. 
+   Download as zip.. install in firefox..
 
