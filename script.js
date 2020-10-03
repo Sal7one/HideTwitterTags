@@ -6,12 +6,17 @@ var relventppl = "relventppl";
 var footer = "footer";
 var savedvalues = "";
 let keey = "";
+let gettingItem = browser.storage.local.get();
+gettingItem.then((gotvalues) => {
+  values = [];
 
-window.onload = function () {
-  Get().then((value) => {
-    App(value);
-  });
-};
+  values.push(gotvalues.tags);
+  values.push(gotvalues.whotofollow);
+  values.push(gotvalues.relventppl);
+  values.push(gotvalues.footer);
+
+  App(values);
+});
 
 function App(result) {
   savedvalues = result;
@@ -65,23 +70,9 @@ mybtns.forEach((element) => {
 });
 
 function refresh() {
-  chrome.tabs.getSelected(null, function (tab) {
-    chrome.tabs.reload(tab.id);
-  });
+  browser.tabs.reload();
 }
 
-function Get() {
-  return new Promise(function (resolve, _reject) {
-    chrome.storage.local.get(null, function (items) {
-      let values = [];
-      values[0] = items[tags];
-      values[1] = items[whotofollow];
-      values[2] = items[relventppl];
-      values[3] = items[footer];
-      resolve(values);
-    });
-  });
-}
 function Set(key, thingy) {
-  chrome.storage.local.set({ [key]: [thingy] });
+  browser.storage.local.set({ [key]: thingy });
 }
