@@ -36,7 +36,12 @@ It's made by me 💅
 
 
 
-# How to use
+# Download  - How to use
 
-Download as zip.. install in firefox.. ADD ON Store link will be here once published.. 
+# FireFox store Link... (Pending review)
+   https://addons.mozilla.org/en-US/firefox/addon/twitter-tags-and-trends-hider/
+   
+   OR
+   
+   Download as zip.. install in firefox.. ADD ON Store link will be here once published.. 
 
