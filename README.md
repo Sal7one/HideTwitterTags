@@ -40,7 +40,7 @@ It's made by me 💅
 
 # Download  - How to use
 
-# FireFox store Link... (Pending review)
+# FireFox store Link... 
    https://addons.mozilla.org/en-US/firefox/addon/twitter-tags-and-trends-hider/
    
    OR
