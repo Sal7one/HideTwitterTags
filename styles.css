@@ -7,16 +7,20 @@
 .Salsinfo {
   color: white;
 }
-h1.hidertext {
+.hidertext {
   display: inline-block;
-  font-size: 1rem;
-  color: white;
+  font-size: 1.2rem;
+  color: black;
 }
 .salslist {
   min-width: 540px;
   text-align: center;
   padding: 5px;
-  border-color: white;
+  border-color: rgb(0, 0, 0);
+  border-left: rgba(0, 0, 0, 0);
+  border-top: rgba(0, 0, 0, 0);
+  border-right: rgba(0, 0, 0, 0);
+  border-width: 0.8px;
   border-style: solid;
 }
 html.hiderhtml {
@@ -24,7 +28,7 @@ html.hiderhtml {
 }
 body.hiderbody {
   min-width: 420px;
-  background-color: rgb(77, 20, 131);
+  background-color: #d3d3d3;
 }
 .switch {
   display: inline-block;
@@ -66,11 +70,11 @@ body.hiderbody {
 }
 
 input:checked + .slider {
-  background-color: #f32121;
+  background-color: #ffd700;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #f32121;
+  box-shadow: 0 0 1px #ffd700;
 }
 
 input:checked + .slider:before {
