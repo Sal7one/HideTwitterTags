@@ -99,6 +99,15 @@ input:checked + .slider:before {
   display: var(--whotofollow) !important;
 }
 
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-ku1wi2.r-1bro5k0.r-1udh08x {
+  display: var(--whotofollow) !important;
+}
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-ku1wi2.r-1udh08x {
+  display: var(--tags) !important;
+}
+.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-ku1wi2.r-1udh08x{
+  display: var(--tags) !important;
+}
 [aria-label="Footer"] {
   display: var(--footer) !important;
 }
