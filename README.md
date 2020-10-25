@@ -1,6 +1,9 @@
 # HideTwitterTags
 Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer
 
+
+![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
+
 # Features
 
 
@@ -22,7 +25,7 @@ It's made by me 💅
 
 Download from here! 
 
-https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci
+[DOWNLOAD](https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci)
 
 Or 
 
