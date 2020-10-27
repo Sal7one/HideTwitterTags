@@ -1,11 +1,13 @@
 let mybtns = document.querySelectorAll("[data-num]");
 let root = document.documentElement;
+var search = "search";
 var tags = "tags";
 var whotofollow = "whotofollow";
 var relventppl = "relventppl";
 var footer = "footer";
 var savedvalues = "";
 let keey = "";
+
 let gettingItem = browser.storage.local.get();
 gettingItem.then((gotvalues) => {
   values = [];
