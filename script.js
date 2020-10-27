@@ -23,7 +23,7 @@ gettingItem.then((gotvalues) => {
 
 function App(result) {
   savedvalues = result;
-  keey = [tags, whotofollow, relventppl, footer];
+  keey = [search,tags, whotofollow, relventppl, footer];
   NumofSavedValues = savedvalues.length;
 
   if (NumofSavedValues > 0) {
