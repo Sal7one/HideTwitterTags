@@ -12,6 +12,7 @@ let gettingItem = browser.storage.local.get();
 gettingItem.then((gotvalues) => {
   values = [];
 
+  values.push(gotvalues.search);
   values.push(gotvalues.tags);
   values.push(gotvalues.whotofollow);
   values.push(gotvalues.relventppl);
