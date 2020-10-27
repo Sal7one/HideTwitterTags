@@ -45,6 +45,8 @@ function App(result) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
+      if(keey[i] == "search")
+      continue;
       changepagestatus(keey[i], "hidden");
       Set(keey[i], "hidden");
     }
@@ -56,6 +58,7 @@ function changepagestatus(key, status) {
     root.style.setProperty(`--${key}`, "inline");
   } else {
     root.style.setProperty(`--${key}`, "none");
+    FailSafeChecker(key)
   }
 }
 
