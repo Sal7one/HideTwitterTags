@@ -76,3 +76,44 @@ function refresh() {
 function Set(key, thingy) {
   browser.storage.local.set({ [key]: thingy });
 }
+
+
+
+function FailSafeChecker(key){
+
+  element =""
+
+  // Selected elemnt
+  switch(key){
+    case tags: element = `[aria-label="Timeline: Trending now"]`
+    break;
+    case  whotofollow: element =  `[aria-label="Who to follow"]` 
+    break;
+    case relventppl: element =  `[aria-label="Relevant people"]`
+    break;
+    case  footer: element = `[aria-label="Footer"]`
+    break; case search: element =  `[aria-label="Search Twitter"]`
+    break;
+  default:  console.log("Tags hider error..Something huge chnaged in Twitter ")
+  }
+
+    //Is the element here
+    selectedElement = document.querySelector(element)
+    if(selectedElement == null){
+      // No...Wait for it
+      document.arrive(element, function () {
+        //Chcek if it's already hidden, or hide it..
+        if(getComputedStyle(this).display != "none")
+        this.parentNode.style.setProperty("display","none","important")
+        else
+        console.log(`Element ${key} is already hidden`)
+      });
+    }
+    else{
+      // Element was already loaded 
+      if(getComputedStyle(this).display != "none")
+      selectedElement.parentNode.style.setProperty("display","none","important")
+      else
+      console.log(`Element ${key} is already hidden`)
+    }
+}
