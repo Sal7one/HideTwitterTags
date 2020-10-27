@@ -119,15 +119,13 @@ function FailSafeChecker(key){
         //Chcek if it's already hidden, or hide it..
         if(getComputedStyle(this).display != "none")
         this.parentNode.style.setProperty("display","none","important")
-        else
-        console.log(`Element ${key} is already hidden`)
+
       });
     }
     else{
       // Element was already loaded 
       if(getComputedStyle(this).display != "none")
       selectedElement.parentNode.style.setProperty("display","none","important")
-      else
-      console.log(`Element ${key} is already hidden`)
+    
     }
 }
