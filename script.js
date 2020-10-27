@@ -50,7 +50,7 @@ function changepagestatus(key, status) {
   if (status == "shown") {
     root.style.setProperty(`--${key}`, "inline");
   } else {
-   // root.style.setProperty(`--${key}`, "none");
+   root.style.setProperty(`--${key}`, "none");
     FailSafeChecker(key)
   }
 }
