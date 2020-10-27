@@ -1,5 +1,6 @@
 let mybtns = document.querySelectorAll("[data-num]");
 let root = document.documentElement;
+var search = "search";
 var tags = "tags";
 var whotofollow = "whotofollow";
 var relventppl = "relventppl";
@@ -15,7 +16,7 @@ window.onload = function () {
 
 function App(result) {
   savedvalues = result;
-  keey = [tags, whotofollow, relventppl, footer];
+  keey = [search,tags, whotofollow, relventppl, footer];
   NumofSavedValues = savedvalues.length;
 
   if (NumofSavedValues > 0) {
@@ -33,10 +34,12 @@ function App(result) {
       }
     }
   } else {
-    for (i = 0; i < 4; i++) {
+    for (i = 0; i < 5; i++) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
+      if(keey[i] == "search")
+      continue;
       changepagestatus(keey[i], "hidden");
       Set(keey[i], "hidden");
     }
@@ -48,6 +51,7 @@ function changepagestatus(key, status) {
     root.style.setProperty(`--${key}`, "inline");
   } else {
     root.style.setProperty(`--${key}`, "none");
+    FailSafeChecker(key)
   }
 }
 
@@ -74,14 +78,21 @@ function Get() {
   return new Promise(function (resolve, _reject) {
     chrome.storage.local.get(null, function (items) {
       let values = [];
-      values[0] = items[tags];
-      values[1] = items[whotofollow];
-      values[2] = items[relventppl];
-      values[3] = items[footer];
+      values[0] = items[search];
+      values[1] = items[tags];
+      values[2] = items[whotofollow];
+      values[3] = items[relventppl];
+      values[4] = items[footer];
       resolve(values);
     });
   });
 }
 function Set(key, thingy) {
   chrome.storage.local.set({ [key]: [thingy] });
+}
+
+// Backup plan if Twitter change their elemnts
+
+function FailSafeChecker(){
+  
 }
