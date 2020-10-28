@@ -1,5 +1,5 @@
 # HideTwitterTags
-Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer
+Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer + Twitter Search
 
 
 ![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
