@@ -19,6 +19,8 @@ function App(result) {
   keey = [search,tags, whotofollow, relventppl, footer];
   NumofSavedValues = savedvalues.length;
 
+  console.log((savedvalues))
+
   if (NumofSavedValues > 0) {
     for (i = 0; i < NumofSavedValues; i++) {
       if (savedvalues[i] == "shown") {
@@ -27,6 +29,8 @@ function App(result) {
         } catch (error) {}
         changepagestatus(keey[i], "shown");
       } else {
+        if(i == 0 && savedvalues[i] == undefined)
+        continue;
         try {
           mybtns[i].setAttribute("checked", true);
         } catch (error) {}
@@ -38,8 +42,10 @@ function App(result) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
-      if(keey[i] == "search")
-      continue;
+      if(keey[i] == "search"){
+        console.log("found")
+        continue;
+      }
       changepagestatus(keey[i], "hidden");
       Set(keey[i], "hidden");
     }
@@ -94,6 +100,8 @@ function Set(key, thingy) {
 // Backup plan if Twitter change their elemnts
 
 function FailSafeChecker(key){
+
+  console.log(key)
 
   element =""
 
