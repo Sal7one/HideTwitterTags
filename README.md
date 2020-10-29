@@ -4,7 +4,7 @@ Hide Twitter Tags and news (What’s happening) + Who to follow + relevant peopl
 
 # Now it works for all languages
 
-It also has Hard coded support for English, Arabic, German, Spanish
+It also has Hard coded support for English, Arabic, German, Spanish (This probably won't be needed anyways)
 
 # Features
 
