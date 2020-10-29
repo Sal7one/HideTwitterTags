@@ -123,24 +123,42 @@ function FailSafeChecker(key){
   default:  console.log("Tags hider error..Something huge changed in Twitter ")
   }
 
-
   for(j = 0; j < element.length; j++){
-
   //Is the element here
   selectedElement = document.querySelector(element[j])
   if(selectedElement == null){
     // No...Wait for it
     document.arrive(element[j], function () {
-      //Chcek if it's already hidden, or hide it..
-      if(getComputedStyle(this).display != "none")
-      this.parentNode.style.setProperty("display","none","important")
+      // Element was already loaded 
+      if(getComputedStyle(this).display != "none"){
+        this.parentNode.style.setProperty("display","none","important")
+        try { 
+           parentofelemnt =  findsidebar(this)
+          parentofelemnt.style.setProperty("display","none","important")
+        } catch (error) {}
+      }
       document.unbindArrive(element[j]);
     });
   }
   else{
-    // Element was already loaded 
-    if(getComputedStyle(this).display != "none")
-    selectedElement.parentNode.style.setProperty("display","none","important")
+    if(getComputedStyle(selectedElement).display != "none"){
+      selectedElement.parentNode.style.setProperty("display","none","important")
+      try { 
+         parentofelemnt =  findsidebar(selectedElement)
+        parentofelemnt.style.setProperty("display","none","important")
+      } catch (error) {}
+    }
   }
   }
+}
+
+
+function findsidebar(element, BeforeSideBar){
+  sidebar = document.querySelector(".css-1dbjc4n.r-1l5qxre.r-m611by")
+  if(element != sidebar){
+    BeforeSideBar = element;
+    element = element.parentNode;
+    return findsidebar(element, BeforeSideBar)
+  }
+  return BeforeSideBar;
 }
