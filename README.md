@@ -1,7 +1,7 @@
 # HideTwitterTags
 Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer + Twitter Search
 
-# Now supports Arabic, German, Spanish Twitters.
+# Now has better support Arabic, German, Spanish Twitters. (Might work for all languages by defualt but won't look perfect)
 Feel free to add your own lanuage line 104 in script, and 136 in css
 
 
