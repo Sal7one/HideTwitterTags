@@ -19,7 +19,6 @@ function App(result) {
   keey = [search,tags, whotofollow, relventppl, footer];
   NumofSavedValues = savedvalues.length;
 
-  console.log((savedvalues))
 
   if (NumofSavedValues > 0) {
     for (i = 0; i < NumofSavedValues; i++) {
@@ -100,40 +99,48 @@ function Set(key, thingy) {
 // Backup plan if Twitter change their elemnts
 
 function FailSafeChecker(key){
-
-  console.log(key)
-
-  element =""
-
+  
+  // Supported languages are English, Arabic, German, Spanish
+  searchlangs = [ `[aria-label="Search Twitter"]`,`[aria-label="البحث في تويتر"]`,`[aria-label="Twitter durchsuchen"]`,`[aria-label="Buscar en Twitter"]` ]
+  taglangs = [`[aria-label="Timeline: Trending now"]`,  `[aria-label="الخطّ الزمنيّ: المتداوَل الآن"]`,`[aria-label="Timeline: Aktuelle Trends"]`,`[aria-label="Cronología: Tendencias del momento"]` ]
+  whotofollowlangs = [`[aria-label="Who to follow"]` , `[aria-label="اقتراحات المتابعة"]`,`[aria-label="Wem folgen?"]`,`[aria-label="A quién seguir"]` ]
+  relventppllangs = [`[aria-label="Relevant people"]`, `[aria-label="الأشخاص ذوو الصلة"]`,`[aria-label="Relevante Personen"]`,`[aria-label="Personas relevantes"]`]
+  footerlangs = [`[aria-label="Footer"]`, `[aria-label="الشريط السُفلي"] `,`[aria-label="Fußzeile"]`,`[aria-label="Pie de página"]`]
+  
+  element = [0]
+  
   // Selected elemnt
   switch(key){
-    case tags: element = `[aria-label="Timeline: Trending now"]`
+    case tags: element = taglangs
     break;
-    case  whotofollow: element =  `[aria-label="Who to follow"]` 
+    case  whotofollow: element =  whotofollowlangs
     break;
-    case relventppl: element =  `[aria-label="Relevant people"]`
+    case relventppl: element =  relventppllangs
     break;
-    case  footer: element = `[aria-label="Footer"]`
-    break; case search: element =  `[aria-label="Search Twitter"]`
+    case  footer: element = footerlangs
+    break; case search: element =  searchlangs
     break;
-  default:  console.log("Tags hider error..Something huge chnaged in Twitter ")
+  default:  console.log("Tags hider error..Something huge changed in Twitter ")
   }
 
-    //Is the element here
-    selectedElement = document.querySelector(element)
-    if(selectedElement == null){
-      // No...Wait for it
-      document.arrive(element, function () {
-        //Chcek if it's already hidden, or hide it..
-        if(getComputedStyle(this).display != "none")
-        this.parentNode.style.setProperty("display","none","important")
 
-      });
-    }
-    else{
-      // Element was already loaded 
+  for(j = 0; j < element.length; j++){
+
+  //Is the element here
+  selectedElement = document.querySelector(element[j])
+  if(selectedElement == null){
+    // No...Wait for it
+    document.arrive(element[j], function () {
+      //Chcek if it's already hidden, or hide it..
       if(getComputedStyle(this).display != "none")
-      selectedElement.parentNode.style.setProperty("display","none","important")
-    
-    }
+      this.parentNode.style.setProperty("display","none","important")
+      document.unbindArrive(element[j]);
+    });
+  }
+  else{
+    // Element was already loaded 
+    if(getComputedStyle(this).display != "none")
+    selectedElement.parentNode.style.setProperty("display","none","important")
+  }
+  }
 }
