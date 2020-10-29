@@ -1,8 +1,9 @@
 # HideTwitterTags
 Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer + Twitter Search
 
+# Now supports Arabic, German, Spanish Twitters.
+Feel free to add your own lanuage line 104 in script, and 136 in css
 
-![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
 
 # Features
 
@@ -20,6 +21,7 @@ Your preference will be saved in memory
 It's made by me 💅
 
 
+![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
 
 # How to use
 
