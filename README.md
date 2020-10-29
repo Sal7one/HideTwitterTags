@@ -27,7 +27,7 @@ It's made by me 💅
 
 Download from here! 
 
-[DOWNLOAD](https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci)
+[DOWNLOAD (Chrome Web Store](https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci)
 
 Or 
 
