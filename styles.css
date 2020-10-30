@@ -122,7 +122,7 @@ input:checked + .slider:before {
   display: var(--relventppl) !important;
 }
 .css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-ku1wi2.r-1udh08x {
-  display: var(--relventppl) !important;
+  border-color: transparent !important;
 }
 
 /* footer */
