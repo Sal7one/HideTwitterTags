@@ -34,6 +34,8 @@ function App(result) {
         } catch (error) {}
         changepagestatus(keey[i], "shown");
       } else {
+        if(i == 0 && savedvalues[i] == undefined)
+        continue;
         try {
           mybtns[i].setAttribute("checked", true);
         } catch (error) {}
