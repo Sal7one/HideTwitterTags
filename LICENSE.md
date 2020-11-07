@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Sal7one
+Copyright (c) 2020 Saleh Alanazi (Sal7one)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
