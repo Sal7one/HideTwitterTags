@@ -32,6 +32,5 @@ Or
 
 Download as Zip file, Open chrome Extensions and load the folder as unpacked
 
-# Side note
-
+if you choose this.. 
 There will be an annoying message saying that this extension was downloaded from outside the chrome webstore everytime you run chrome
