@@ -4,6 +4,7 @@
   --whotofollow: inline;
   --relventppl: inline;
   --footer: inline;
+  --explore: flex;
 }
 .Salsinfo {
   color: white;
@@ -131,6 +132,11 @@ input:checked + .slider:before {
 }
 .css-1dbjc4n.r-1niwhzg.r-18bvks7.r-1867qdf.r-1phboty.r-1yadl64.r-ku1wi2.r-1udh08x {
   display: var(--footer) !important;
+}
+
+/*explore button*/
+a[href="/explore"] {
+  display: var(--explore) !important;
 }
 
 /*  multiple langs Arabic German Spanish */
