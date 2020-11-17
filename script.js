@@ -132,7 +132,7 @@ function FailSafeChecker(key){
   if(key === explore){
     explore =  document.querySelector(`a[href="/explore"]`)
     if(explore == null)
-    document.arrive(`a[href="/explore"]`, ()=>{this.style.display = "none"})
+    document.arrive(`a[href="/explore"]`, (Explore)=>{Explore.style.display = "none"})
     else
     explore.style.display = "none"
   }else{
