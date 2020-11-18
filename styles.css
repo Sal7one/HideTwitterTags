@@ -4,6 +4,7 @@
   --whotofollow: inline;
   --relventppl: inline;
   --footer: inline;
+  --explore: flex;
 }
 .Salsinfo {
   color: white;
@@ -122,7 +123,7 @@ input:checked + .slider:before {
   display: var(--relventppl) !important;
 }
 .css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-ku1wi2.r-1udh08x {
-  display: var(--relventppl) !important;
+  border-color: transparent !important;
 }
 
 /* footer */
@@ -131,6 +132,11 @@ input:checked + .slider:before {
 }
 .css-1dbjc4n.r-1niwhzg.r-18bvks7.r-1867qdf.r-1phboty.r-1yadl64.r-ku1wi2.r-1udh08x {
   display: var(--footer) !important;
+}
+
+/*explore button*/
+a[href="/explore"] {
+  display: var(--explore) !important;
 }
 
 /*  multiple langs Arabic German Spanish */
