@@ -144,24 +144,20 @@ function FailSafeChecker(key){
     // No...Wait for it
     document.arrive(element[j], function () {
       // Element was already loaded 
-      if(getComputedStyle(this).display != "none"){
         this.parentNode.style.setProperty("display","none","important")
         try { 
            parentofelemnt =  findsidebar(this)
           parentofelemnt.style.setProperty("display","none","important")
         } catch (error) {}
-      }
       document.unbindArrive(element[j]);
     });
   }
   else{
-    if(getComputedStyle(selectedElement).display != "none"){
       selectedElement.parentNode.style.setProperty("display","none","important")
       try { 
          parentofelemnt =  findsidebar(selectedElement)
         parentofelemnt.style.setProperty("display","none","important")
       } catch (error) {}
-    }
   }
   }
 }
