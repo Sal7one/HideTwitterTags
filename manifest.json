@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Twitter tags hider",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Hides tags and who to follow",
   "content_scripts": [
     {
+      "run_at":"document_start",
       "css": ["styles.css"],
       "js": ["bower_components/arrive/src/arrive.js","script.js"],
       "matches": ["https://twitter.com/*"]
