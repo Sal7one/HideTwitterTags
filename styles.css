@@ -28,7 +28,7 @@ html.hiderhtml {
 }
 body.hiderbody {
   min-width: 420px;
-  background-color: #d3d3d3;
+  background-color: #4e0606;
 }
 .switch {
   display: inline-block;
@@ -74,7 +74,7 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #ffd700;
+  box-shadow: 0 0 1px #35332c;
 }
 
 input:checked + .slider:before {
