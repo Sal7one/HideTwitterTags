@@ -1,3 +1,6 @@
+*{
+  font-size: 16px !important;
+}
 :root {
   --search: inline;
   --tags: inline;
@@ -15,7 +18,7 @@
   color: #f2fdff;
 }
 .salslist {
-  min-width: 540px;
+  min-width: 375px;
   text-align: center;
   padding: 5px;
   border-color: rgb(0, 0, 0);
@@ -35,7 +38,7 @@ body.hiderbody {
 .switch {
   display: inline-block;
   margin-left: 15;
-  margin-top: 21;
+  margin-top: 17;
   position: absolute;
   width: 40px;
   height: 14px;
