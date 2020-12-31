@@ -1,24 +1,16 @@
 # HideTwitterTags
 
-Hide Twitter Tags and news (What’s happening) + Who to follow + relevant people + twitter footer + Twitter Search
-
-# Now it works for all languages
-
-It also has Hard coded support for English, Arabic, German, Spanish (This probably won't be needed anyways)
+Hide Twitter Tags Trends and elements (All languages) 
 
 # Features
 
-Hide Annoying tags (and other things)
-
-You can show or hide them with a button
-
-Your preference will be saved in memory
-
-It works in Profile pages and without a Twitter account.
-
-It now works with Twitter footer, who to follow and relevant people (inside tweets)
-
-It's made by me 💅
+🌠 Hide:
+ ⭐ Trends and Tags.
+ ⭐ Who to follow.
+ ⭐ Relevant people.
+ ⭐ Footer.
+ ⭐ Search (Shown by default) 
+ ⭐ Explore Button (Shown by default) 
 
 ![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
 
@@ -26,11 +18,14 @@ It's made by me 💅
 
 Download from here!
 
+Chrome: 
 [DOWNLOAD (Chrome Web Store)](https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci)
 
-Or
+FireFox:
+[DOWNLOAD (Mozila Addons)](https://addons.mozilla.org/en-US/firefox/addon/twitter-tags-and-trends-hider/)
 
+[FireFox Repository](https://github.com/Sal7one/HideTwitterTags/tree/firefoxversion)
+
+
+You can also
 Download as Zip file, Open chrome Extensions and load the folder as unpacked
-
-if you choose this.. 
-There will be an annoying message saying that this extension was downloaded from outside the chrome webstore everytime you run chrome
