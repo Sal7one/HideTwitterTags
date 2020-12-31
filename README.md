@@ -4,13 +4,16 @@ Hide Twitter Tags Trends and elements (All languages)
 
 # Features
 
-🌠 Hide:
- ⭐ Trends and Tags.
- ⭐ Who to follow.
- ⭐ Relevant people.
- ⭐ Footer.
- ⭐ Search (Shown by default) 
+ <ul>
+    🌠 Hide:
+ 
+ ⭐ Trends and Tags.<br>
+ ⭐ Who to follow.<br>
+ ⭐ Relevant people.<br>
+ ⭐ Footer.<br>
+ ⭐ Search (Shown by default)<br>
  ⭐ Explore Button (Shown by default) 
+</ul>
 
 ![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
 
