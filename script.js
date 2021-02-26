@@ -129,6 +129,28 @@ function FailSafeChecker(key){
   default:  console.log("Tags hider error..Something huge changed in Twitter ")
   }
 
+  if(key === tags){
+    try {
+     tagselemnt =  document.querySelector(".css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x")
+     if(tagselemnt!= null){
+
+       tagselemnt.style.setProperty(" border-width","0px","important")
+       tagselemnt.style.setProperty("border-color","transparent","important")
+     }else{
+
+      document.arrive(".css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x", function () {
+        this.style.setProperty("border-width","0px","important")
+        this.style.setProperty("border-color","transparent","important")
+      })
+
+     }
+    } catch (error) {
+      console.log("error in backup tags border")
+      console.log(error)
+    }
+    
+  }
+
   if(key === explore){
     explore =  document.querySelector(`a[href="/explore"]`)
     if(explore == null)
