@@ -133,14 +133,14 @@ Black
   display: var(--whotofollow) !important;
 }
 
-/* Relevant people and it's line*/
-[aria-label="Relevant people"],
+/* Relevant people and it's lines*/
+[aria-label="Relevant people"] {
+  display: var(--relventppl) !important;
+}
+
 .css-1dbjc4n.r-14lw9ot.r-1gm7m50.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
 .css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
 .css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x {
-  display: var(--relventppl) !important;
-}
-.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x {
   border-color: transparent !important;
 }
 

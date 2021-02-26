@@ -131,19 +131,12 @@ function FailSafeChecker(key){
 
   if(key === tags){
     try {
-     tagselemnt =  document.querySelector(".css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x")
-     if(tagselemnt!= null){
+      autoborderhider();
+      setTimeout(()=>{
+        autoborderhider();
+       },950)
+ 
 
-       tagselemnt.style.setProperty(" border-width","0px","important")
-       tagselemnt.style.setProperty("border-color","transparent","important")
-     }else{
-
-      document.arrive(".css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x", function () {
-        this.style.setProperty("border-width","0px","important")
-        this.style.setProperty("border-color","transparent","important")
-      })
-
-     }
     } catch (error) {
       console.log("error in backup tags border")
       console.log(error)
@@ -195,3 +188,23 @@ function findsidebar(element, BeforeSideBar){
   }
   return BeforeSideBar;
 }
+
+
+// not necessary  
+// function autoborderhider(){
+//   tagselemntwhite =  document.querySelector(".css-1dbjc4n.r-1ihkh82.r-1in3vh1.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x")
+//   tagselemntDark =  document.querySelector(".css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x")
+//   tagselemntblack =  document.querySelector(".css-1dbjc4n.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x")
+//  if(tagselemntwhite){
+//   tagselemntwhite.style.setProperty("border-width","0px","important")
+//   tagselemntwhite.style.setProperty("border-color","transparent","important")
+//  }
+//  if(tagselemntDark){
+//   tagselemntDark.style.setProperty("border-width","0px","important")
+//   tagselemntDark.style.setProperty("border-color","transparent","important")
+//  }
+//  if(tagselemntblack){
+//   tagselemntblack.style.setProperty("border-width","0px","important")
+//   tagselemntblack.style.setProperty("border-color","transparent","important")
+//  }
+// }
