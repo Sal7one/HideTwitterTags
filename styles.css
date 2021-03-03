@@ -178,7 +178,12 @@ a[href="/explore"] {
 
 [aria-label="الأشخاص ذوو الصلة"],
 [aria-label="Relevante Personen"],
-[aria-label="Personas relevantes"] {
+[aria-label="Personas relevantes"],
+[aria-label="प्रासंगिक लोग"],
+[aria-label="Подходящие люди"],
+[aria-label="Пов’язані люди"],
+[aria-label="Persone pertinenti"],
+[aria-label="関連性の高いアカウント"] {
   display: var(--relventppl) !important;
 }
 
