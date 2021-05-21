@@ -8,7 +8,7 @@
       "run_at":"document_start",
       "css": ["styles.css"],
       "js": ["bower_components/arrive/src/arrive.js","script.js"],
-      "matches": ["https://twitter.com/*"]
+      "matches": ["https://twitter.com/*","https://mobile.twitter.com/*"]
     }
   ],
   "browser_action": {
