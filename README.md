@@ -1,6 +1,6 @@
 # HideTwitterTags
 
-Hide Twitter Tags Trends and elements (All languages) 
+Hide Twitter Tags Trends and elements (All languages)
 
 # Features
 
@@ -8,6 +8,7 @@ Hide Twitter Tags Trends and elements (All languages)
     🌠 Hide:
  
  ⭐ Trends and Tags.<br>
+ ⭐Topics to follow.<br>
  ⭐ Who to follow.<br>
  ⭐ Relevant people.<br>
  ⭐ Footer.<br>
@@ -21,14 +22,13 @@ Hide Twitter Tags Trends and elements (All languages)
 
 Download from here!
 
-Chrome: 
+Chrome:
 [DOWNLOAD (Chrome Web Store)](https://chrome.google.com/webstore/detail/twitter-tags-hider/njfgdkckokikphjhheihclmnjnbchfci)
 
 FireFox:
 [DOWNLOAD (Mozila Addons)](https://addons.mozilla.org/en-US/firefox/addon/twitter-tags-and-trends-hider/)
 
 [FireFox Repository](https://github.com/Sal7one/HideTwitterTags/tree/firefoxversion)
-
 
 You can also
 Download as Zip file, Open chrome Extensions and load the folder as unpacked
