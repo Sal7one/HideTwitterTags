@@ -6,6 +6,7 @@ var whotofollow = "whotofollow";
 var relventppl = "relventppl";
 var footer = "footer";
 var explore = "explore";
+var topics = "topics";
 var savedvalues = "";
 let keey = "";
 
@@ -17,7 +18,7 @@ window.onload = function () {
 
 function App(result) {
   savedvalues = result;
-  keey = [search,tags, whotofollow, relventppl, footer, explore];
+  keey = [search,tags, whotofollow, relventppl, footer, explore, topics];
   NumofSavedValues = savedvalues.length;
 
 
@@ -38,7 +39,7 @@ function App(result) {
       }
     }
   } else {
-    for (i = 0; i < 5; i++) {
+    for (i = 0; i < 6; i++) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
@@ -93,6 +94,7 @@ function Get() {
       values[3] = items[relventppl];
       values[4] = items[footer];
       values[5] = items[explore];
+      values[6] = items[topics];
       resolve(values);
     });
   });
@@ -126,7 +128,7 @@ function FailSafeChecker(key){
     break; case search: element =  searchlangs
     break; case explore: element =  explorelangs
     break;
-  default:  console.log("Tags hider error..Something huge changed in Twitter ")
+  default: return
   }
 
   if(key === tags){
