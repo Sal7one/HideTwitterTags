@@ -78,10 +78,10 @@ mybtns.forEach((element) => {
   });
 });
 
-function refresh() {
-  chrome.tabs.getSelected(null, function (tab) {
-    chrome.tabs.reload(tab.id);
-  });
+async function refresh() {
+  let queryOptions = { active: true, currentWindow: true };
+  let [tab] = await chrome.tabs.query(queryOptions);
+  chrome.tabs.reload(tab.id);
 }
 
 function Get() {
