@@ -85,6 +85,7 @@ mybtns.forEach((element) => {
 });
 
 function refresh() {
+  if(location.href.includes("twitter.com"))
   browser.tabs.reload();
 }
 
