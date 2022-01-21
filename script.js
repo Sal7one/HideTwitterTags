@@ -79,13 +79,17 @@ mybtns.forEach((element) => {
 });
 
 async function refresh() {
-  if(location.href.includes("twitter.com"))
-  {
+  
   let queryOptions = { active: true, currentWindow: true };
   let [tab] = await chrome.tabs.query(queryOptions);
+  if(tab.url.includes("twitter.com"))
   chrome.tabs.reload(tab.id);
-}
-
+  else{
+    try {
+      document.querySelector("#messageDiv").style.display = "block";
+    } catch (error) {
+    }
+  }
 }
 
 function Get() {
