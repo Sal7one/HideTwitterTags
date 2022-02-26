@@ -7,6 +7,7 @@ var relventppl = "relventppl";
 var footer = "footer";
 var explore = "explore";
 var topics = "topics";
+var communities = "communities";
 var savedvalues = "";
 let keey = "";
 
@@ -18,7 +19,7 @@ window.onload = function () {
 
 function App(result) {
   savedvalues = result;
-  keey = [search,tags, whotofollow, relventppl, footer, explore, topics];
+  keey = [search,tags, whotofollow, relventppl, footer, explore, topics, communities];
   NumofSavedValues = savedvalues.length;
 
 
@@ -30,7 +31,7 @@ function App(result) {
         } catch (error) {}
         changepagestatus(keey[i], "shown");
       } else {
-        if((i == 0|| i == 5) && savedvalues[i] == undefined)
+        if((i == 0|| i == 5 || i ==7) && savedvalues[i] == undefined)
         continue;
         try {
           mybtns[i].setAttribute("checked", true);
@@ -39,11 +40,11 @@ function App(result) {
       }
     }
   } else {
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 7; i++) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
-      if(keey[i] == "search" || keey[i] == "explore"){
+      if(keey[i] == "search" || keey[i] == "explore" || keey[i] == "communities"){
         console.log("found")
         continue;
       }
@@ -55,7 +56,7 @@ function App(result) {
 
 function changepagestatus(key, status) {
   if (status == "shown") {
-    if(key == explore)
+    if(key == explore || key == communities)
     root.style.setProperty(`--${key}`, "flex");
     else
     root.style.setProperty(`--${key}`, "inline");
@@ -103,6 +104,7 @@ function Get() {
       values[4] = items[footer];
       values[5] = items[explore];
       values[6] = items[topics];
+      values[7] = items[communities];
       resolve(values);
     });
   });
@@ -121,6 +123,7 @@ function FailSafeChecker(key){
   whotofollowlangs = [`[aria-label="Who to follow"]` , `[aria-label="اقتراحات المتابعة"]`,`[aria-label="Wem folgen?"]`,`[aria-label="A quién seguir"]` ]
   relventppllangs = [`[aria-label="Relevant people"]`, `[aria-label="الأشخاص ذوو الصلة"]`,`[aria-label="Relevante Personen"]`,`[aria-label="Personas relevantes"]`, `[aria-label="प्रासंगिक लोग"]`,`[aria-label="Подходящие люди"]`, `[aria-label="Пов’язані люди"]`,` [aria-label="Persone pertinenti"]`, `[aria-label="関連性の高いアカウント"]`]
   footerlangs = [`[aria-label="Footer"]`, `[aria-label="الشريط السُفلي"] `,`[aria-label="Fußzeile"]`,`[aria-label="Pie de página"]`]
+  explorelangs = [`a[href="/explore"]`]
   explorelangs = [`a[href="/explore"]`]
   element = [0]
   
@@ -160,6 +163,19 @@ function FailSafeChecker(key){
     document.arrive(`a[href="/explore"]`, (Explore)=>{Explore.style.display = "none"})
     else
     explore.style.display = "none"
+  }else if(key === communities){
+
+    communities =  document.querySelector(`a[href="/home"]`)
+    communities = communities.parentNode.children[2]
+    
+    if(communities == null)
+    document.arrive(`a[href="/home"]`, (communities)=>{
+      communities = communities.parentNode.children[2] // actual node has username only way to get it is by it's brothers
+      communities.style.display = "none"
+    })
+    else
+    communities.style.display = "none"
+
   }else{
 
   for(j = 0; j < element.length; j++){

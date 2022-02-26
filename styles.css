@@ -5,6 +5,7 @@
   --relventppl: inline;
   --footer: inline;
   --explore: flex;
+  --communities: flex;
   --topics: inline;
 }
 .Salsinfo {
@@ -108,6 +109,11 @@ White
 Dim
 Black
 */
+
+/* communities */
+nav[role="navigation"][aria-label="Principal"]:nth-child(1) a:nth-child(3) {
+  display: var(--communities) !important;
+}
 
 /* What's happening (Tags and it's line) */
 [aria-label="Timeline: Trending now"] {
