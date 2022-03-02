@@ -1,3 +1,5 @@
+// TODO Refactor all code base to go hand in hand with firefox
+
 let mybtns = document.querySelectorAll("[data-num]");
 let root = document.documentElement;
 var search = "search";
