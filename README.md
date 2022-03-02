@@ -8,7 +8,7 @@ Hide Twitter Tags Trends and elements (All languages)
     🌠 Hide:
  
  ⭐ Trends and Tags.<br>
- ⭐ Topics to follow.<br>
+ ⭐Topics to follow.<br>
  ⭐ Who to follow.<br>
  ⭐ Relevant people.<br>
  ⭐ Footer.<br>

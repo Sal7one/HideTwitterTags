@@ -38,7 +38,7 @@ function App(result) {
         } catch (error) {}
         changepagestatus(keey[i], "shown");
       } else {
-        if((i == 0|| i == 5) && savedvalues[i] == undefined)
+        if((i == 0|| i == 5 || i ==7) && savedvalues[i] == undefined)
         continue;
         try {
           mybtns[i].setAttribute("checked", true);
@@ -61,7 +61,7 @@ function App(result) {
 
 function changepagestatus(key, status) {
   if (status == "shown") {
-    if(key == explore)
+    if(key == explore || key == communities)
     root.style.setProperty(`--${key}`, "flex");
     else
     root.style.setProperty(`--${key}`, "inline");
@@ -104,7 +104,6 @@ function FailSafeChecker(key){
   relventppllangs = [`[aria-label="Relevant people"]`, `[aria-label="الأشخاص ذوو الصلة"]`,`[aria-label="Relevante Personen"]`,`[aria-label="Personas relevantes"]`]
   footerlangs = [`[aria-label="Footer"]`, `[aria-label="الشريط السُفلي"] `,`[aria-label="Fußzeile"]`,`[aria-label="Pie de página"]`]
   explorelangs = [`a[href="/explore"]`]
-
   element = [0]
   
   // Selected elemnt
@@ -129,6 +128,19 @@ function FailSafeChecker(key){
     document.arrive(`a[href="/explore"]`, (Explore)=>{Explore.style.display = "none"})
     else
     explore.style.display = "none"
+  }else if(key === communities){
+
+    communities =  document.querySelector(`a[href="/home"]`)
+    communities = communities.parentNode.children[2]
+    
+    if(communities == null)
+    document.arrive(`a[href="/home"]`, (communities)=>{
+      communities = communities.parentNode.children[2] // actual node has username only way to get it is by it's brothers
+      communities.style.display = "none"
+    })
+    else
+    communities.style.display = "none"
+
   }else{
   for(j = 0; j < element.length; j++){
   //Is the element here

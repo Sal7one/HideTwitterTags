@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Twitter tags hider",
   "version": "2.0.0",
   "description": "Hides tags and who to follow",
@@ -11,10 +11,10 @@
       "matches": ["https://twitter.com/*"]
     }
   ],
-  "browser_action": {
+  "action": {
     "default_popup": "ui.html"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "tabs"],
   "icons": {
     "48": "icon48.png",
     "128": "icon128.png"
