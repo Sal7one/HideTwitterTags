@@ -1,0 +1,227 @@
+:root {
+  --search: inline;
+  --tags: inline;
+  --whotofollow: inline;
+  --relventppl: inline;
+  --footer: inline;
+  --explore: flex;
+  --communities: flex;
+  --topics: inline;
+}
+.Salsinfo {
+  color: #101935;
+}
+.hidertext {
+  display: inline-block;
+  font-size: 16px;
+  color: #f2fdff;
+}
+.salslist {
+  min-width: 375px;
+  text-align: center;
+  padding: 5px;
+  border-color: rgb(0, 0, 0);
+  border-left: rgba(0, 0, 0, 0);
+  border-top: rgba(0, 0, 0, 0);
+  border-right: rgba(0, 0, 0, 0);
+  border-width: 0.8px;
+  border-style: solid;
+}
+html.hiderhtml {
+  height: max-content;
+}
+body.hiderbody {
+  min-width: 420px;
+  background-color: #78a8aa;
+}
+.switch {
+  display: inline-block;
+  margin-left: 15;
+  margin-top: 17;
+  position: absolute;
+  width: 40px;
+  height: 14px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 9px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #101935;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #101935;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Search Twitter */
+[aria-label="Search Twitter"] {
+  display: var(--search) !important;
+}
+.r-1oszu61.r-1phboty.r-1yadl64.r-deolkf.r-6koalj.r-13awgt0.r-eqz5dr.r-crgep1.r-ifefl9.r-bcqeeo.r-t60dpp.r-bnwqim.r-417010 {
+  display: var(--search) !important;
+}
+
+/*
+White
+Dim
+Black
+*/
+
+/* communities */
+nav[role="navigation"][aria-label="Principal"]:nth-child(1) a:nth-child(3) {
+  display: var(--communities) !important;
+}
+
+/* What's happening (Tags and it's line) */
+[aria-label="Timeline: Trending now"] {
+  display: var(--tags) !important;
+}
+.css-1dbjc4n.r-1ihkh82.r-1in3vh1.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > div.css-1dbjc4n
+  > div.css-1dbjc4n,
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > div.css-1dbjc4n
+  > div.css-1dbjc4n,
+.css-1dbjc4n.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > div.css-1dbjc4n
+  > div.css-1dbjc4n {
+  display: var(--tags) !important;
+  border-color: transparent !important;
+  border-width: 0px;
+}
+
+/*who to follow*/
+[aria-label="Who to follow"] {
+  display: var(--whotofollow) !important;
+}
+.css-1dbjc4n.r-1ihkh82.r-1in3vh1.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1bro5k0.r-1udh08x,
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1bro5k0.r-1udh08x,
+.css-1dbjc4n.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1bro5k0.r-1udh08x {
+  display: var(--whotofollow) !important;
+}
+
+/* Relevant people and it's lines*/
+[aria-label="Relevant people"] {
+  display: var(--relventppl) !important;
+}
+
+.css-1dbjc4n.r-14lw9ot.r-1gm7m50.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
+.css-1dbjc4n.r-yfoy6g.r-18bvks7.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
+.css-1dbjc4n.r-kemksi.r-1kqtdi0.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x {
+  border-color: transparent !important;
+}
+
+/* footer */
+[aria-label="Footer"] {
+  display: var(--footer) !important;
+}
+.css-1dbjc4n.r-1niwhzg.r-18bvks7.r-1867qdf.r-1phboty.r-1yadl64.r-1ifxtd0.r-1udh08x {
+  display: var(--footer) !important;
+}
+
+/*explore button*/
+a[href="/explore"] {
+  display: var(--explore) !important;
+}
+
+/*TOPICS TO FOLLOW and it's border*/
+
+.css-1dbjc4n.r-x572qd.r-1d6w8o1.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x,
+.css-1dbjc4n.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x {
+  border-color: transparent !important;
+  border-width: 0px;
+}
+
+.css-1dbjc4n.r-x572qd.r-1d6w8o1.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > .css-1dbjc4n
+  > section,
+.css-1dbjc4n.r-1uaug3w.r-1uhd6vh.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > .css-1dbjc4n
+  > section,
+.css-1dbjc4n.r-1ysxnx4.r-k0dy70.r-1867qdf.r-1phboty.r-rs99b7.r-1ifxtd0.r-1udh08x
+  > .css-1dbjc4n
+  > section {
+  display: var(--topics) !important;
+  border-color: transparent !important;
+  border-width: 0px;
+}
+
+/*  multiple langs Arabic German Spanish */
+[aria-label="البحث في تويتر"],
+[aria-label="Twitter durchsuchen"],
+[aria-label="Buscar en Twitter"] {
+  display: var(--search) !important;
+}
+
+[aria-label="الخطّ الزمنيّ: المتداوَل الآن"],
+[aria-label="Timeline: Aktuelle Trends"],
+[aria-label="Cronología: Tendencias del momento"] {
+  display: var(--tags) !important;
+}
+
+[aria-label="اقتراحات المتابعة"],
+[aria-label="Wem folgen?"],
+[aria-label="A quién seguir"] {
+  display: var(--whotofollow) !important;
+}
+
+[aria-label="الأشخاص ذوو الصلة"],
+[aria-label="Relevante Personen"],
+[aria-label="Personas relevantes"],
+[aria-label="प्रासंगिक लोग"],
+[aria-label="Подходящие люди"],
+[aria-label="Пов’язані люди"],
+[aria-label="Persone pertinenti"],
+[aria-label="関連性の高いアカウント"] {
+  display: var(--relventppl) !important;
+}
+
+[aria-label="الشريط السُفلي"],
+[aria-label="Fußzeile"],
+[aria-label="Pie de página"] {
+  display: var(--footer) !important;
+}
