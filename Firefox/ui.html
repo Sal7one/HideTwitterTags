@@ -1,9 +1,13 @@
 <html class="hiderhtml">
   <head>
     <title>Twitter options</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="uistyles.css" />
   </head>
   <body class="hiderbody">
+    <div id="messageDiv" class="salslist" style="display: none;">
+      <h1 class="hidertext" style="color: red; background-color: rgb(238, 238, 238);">You're outside of Twitter Refresh Twitter to see changes </h1>
+    </div>
+
       <div class="salslist">
       <h1 class="hidertext">Hide Search </h1>
       <label id="btn" class="switch">
@@ -54,22 +58,24 @@
         <span class="slider round"></span>
       </label>
     </div>
-  
-    <div class="salslist" style="background:  #101935;" >
-      <h1 class="hidertext" style="font-size: 1.2rem;">Contact Dev: &nbsp;</h1>
-        <a
-          href="https://github.com/Sal7one"
-          target="_newtab"
-          ><h1  class="hidertext">&nbsp;Github &nbsp; </h1></a
-        >
-        &nbsp;
-        <a
-          href="https://twitter.com/Sal_7one"
-          target="_newtab"
-          ><h1  class="hidertext" >Twitter</h1></a
-        >
+
+    <div class="salslist">
+      <h1 class="hidertext">Communities Button</h1>
+      <label id="btn" class="switch">
+        <input id="communities" type="checkbox" data-num="7" />
+        <span class="slider round"></span>
+      </label>
     </div>
-    <script type="text/javascript" src="bower_components/arrive/src/arrive.js" defer></script>
-    <script type="text/javascript" src="script.js" defer></script>
+
+    <div class="salslist">
+      <h1 class="hidertext">Hide curious cat and Tellonym</h1>
+      <label id="btn" class="switch">
+        <input id="linkConsent" type="checkbox" data-num="8" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <script type="text/javascript" src="repo.js" defer></script>
+    <script type="text/javascript" src="options.js" defer></script>
   </body>
 </html>

@@ -15,13 +15,6 @@ function GetAllData() {
     return browser.storage.local.get();
   }
 
-  function Get(key) {
-    return new Promise(function (resolve, _reject) {
-      chrome.storage.local.get([key], function (value) {
-        resolve(value);
-      });
-    });
-  }
   function Set(key, thingy) {
     browser.storage.local.set({ [key]: thingy });
   }
