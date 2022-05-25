@@ -1,17 +1,5 @@
-// TODO Refactor all code base to go hand in hand with firefox
-
 let mybtns = document.querySelectorAll("[data-num]");
 let root = document.documentElement;
-var search = "search";
-var tags = "tags";
-var whotofollow = "whotofollow";
-var relventppl = "relventppl";
-var footer = "footer";
-var explore = "explore";
-var topics = "topics";
-var communities = "communities";
-var savedvalues = "";
-let keey = "";
 
 window.onload = function () {
   Get().then((value) => {
@@ -21,7 +9,7 @@ window.onload = function () {
 
 function App(result) {
   savedvalues = result;
-  keey = [search,tags, whotofollow, relventppl, footer, explore, topics, communities];
+  key = [search, tags, whotofollow, relventppl, footer, explore, topics, communities];
   NumofSavedValues = savedvalues.length;
 
 
@@ -31,14 +19,14 @@ function App(result) {
         try {
           mybtns[i].setAttribute("unchecked", true);
         } catch (error) {}
-        changepagestatus(keey[i], "shown");
+        changepagestatus(key[i], "shown");
       } else {
         if((i == 0|| i == 5 || i ==7) && savedvalues[i] == undefined)
         continue;
         try {
           mybtns[i].setAttribute("checked", true);
         } catch (error) {}
-        changepagestatus(keey[i], "hidden");
+        changepagestatus(key[i], "hidden");
       }
     }
   } else {
@@ -46,12 +34,12 @@ function App(result) {
       try {
         mybtns[i].setAttribute("checked", true);
       } catch (error) {}
-      if(keey[i] == "search" || keey[i] == "explore" || keey[i] == "communities"){
+      if(key[i] == "search" || key[i] == "explore" || key[i] == "communities"){
         console.log("found")
         continue;
       }
-      changepagestatus(keey[i], "hidden");
-      Set(keey[i], "hidden");
+      changepagestatus(key[i], "hidden");
+      Set(key[i], "hidden");
     }
   }
 }
@@ -64,7 +52,7 @@ function changepagestatus(key, status) {
     root.style.setProperty(`--${key}`, "inline");
   } else {
    root.style.setProperty(`--${key}`, "none");
-    FailSafeChecker(key)
+    // FailSafeChecker(key)
   }
 }
 
@@ -82,7 +70,6 @@ mybtns.forEach((element) => {
 });
 
 async function refresh() {
-  
   let queryOptions = { active: true, currentWindow: true };
   let [tab] = await chrome.tabs.query(queryOptions);
   if(tab.url.includes("twitter.com"))
@@ -93,26 +80,6 @@ async function refresh() {
     } catch (error) {
     }
   }
-}
-
-function Get() {
-  return new Promise(function (resolve, _reject) {
-    chrome.storage.local.get(null, function (items) {
-      let values = [];
-      values[0] = items[search];
-      values[1] = items[tags];
-      values[2] = items[whotofollow];
-      values[3] = items[relventppl];
-      values[4] = items[footer];
-      values[5] = items[explore];
-      values[6] = items[topics];
-      values[7] = items[communities];
-      resolve(values);
-    });
-  });
-}
-function Set(key, thingy) {
-  chrome.storage.local.set({ [key]: [thingy] });
 }
 
 // Backup plan if Twitter change their elemnts
