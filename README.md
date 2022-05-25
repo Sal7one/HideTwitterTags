@@ -28,7 +28,5 @@ Chrome:
 FireFox:
 [DOWNLOAD (Mozila Addons)](https://addons.mozilla.org/en-US/firefox/addon/twitter-tags-and-trends-hider/)
 
-[FireFox Repository](https://github.com/Sal7one/HideTwitterTags/tree/firefoxversion)
-
 You can also
 Download as Zip file, Open chrome Extensions and load the folder as unpacked
