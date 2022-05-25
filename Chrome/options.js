@@ -1,8 +1,8 @@
 
 let optionsButtons = document.querySelectorAll("[data-num]");
 
-Get().then((savedData) => {
-    if(Object.keys(savedData).length> 0)
+GetAllData().then((savedData) => {
+    if(Object.keys(savedData).length > 0)
       UpdateButtonStatus(savedData);
     });
 

@@ -1,0 +1,87 @@
+.Salsinfo {
+    color: #101935;
+  }
+  .hidertext {
+    display: inline-block;
+    font-size: 16px;
+    color: #f2fdff;
+  }
+  .salslist {
+    min-width: 375px;
+    text-align: center;
+    padding: 5px;
+    border-color: rgb(0, 0, 0);
+    border-left: rgba(0, 0, 0, 0);
+    border-top: rgba(0, 0, 0, 0);
+    border-right: rgba(0, 0, 0, 0);
+    border-width: 0.8px;
+    border-style: solid;
+  }
+  html.hiderhtml {
+    height: max-content;
+  }
+  body.hiderbody {
+    min-width: 420px;
+    background-color: #78a8aa;
+  }
+  .switch {
+    display: inline-block;
+    margin-left: 15;
+    margin-top: 17;
+    position: absolute;
+    width: 40px;
+    height: 14px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 9px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #101935;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #101935;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

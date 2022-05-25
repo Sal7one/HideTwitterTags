@@ -1,12 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Twitter elements hider",
+  "name": "Twitter tags hider",
   "version": "3.0.0",
   "description": "Hides tags and who to follow and other options",
   "content_scripts": [
     {
       "run_at":"document_start",
-      "css": ["styles.css"],
+      "css": ["uistyles.css", "styles.css"],
       "js": ["bower_components/arrive/src/arrive.js","repo.js","script.js", "options.js"],
       "matches": ["https://twitter.com/*"]
     }

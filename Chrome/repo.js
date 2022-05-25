@@ -10,7 +10,7 @@ let links = "links";
 let savedData =  [search, tags, whotofollow, relventppl, footer, explore, 
  topics, communities, links];
 
-function Get() {
+function GetAllData() {
     return new Promise(function (resolve, _reject) {
       chrome.storage.local.get(null, function (items) {
         resolve(items);
@@ -18,6 +18,13 @@ function Get() {
     });
   }
 
+  function Get(key) {
+    return new Promise(function (resolve, _reject) {
+      chrome.storage.local.get([key], function (value) {
+        resolve(value);
+      });
+    });
+  }
 function Set(key, thingy) {
     chrome.storage.local.set({[key] : [thingy]});
   }

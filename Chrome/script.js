@@ -1,12 +1,16 @@
 let root = document.documentElement;
 
 window.onload = function () {
-  Get().then((value) => {
+  GetAllData().then((value) => {
     App(value);
   });
 };
 
-function App(result) {
+function App(hideOptions) {
+  let twitterElements = Object.keys(hideOptions);
+  twitterElements.forEach(twitterElement =>{
+    changeElementStatus(twitterElement, hideOptions[twitterElement]);
+  })
 }
 
 
@@ -17,6 +21,6 @@ function changeElementStatus(key, status) {
       else
           root.style.setProperty(`--${key}`, "inline");
   } else {
-      root.style.setProperty(`--${key}`, "none"); 
+        root.style.setProperty(`--${key}`, "none"); 
   }
 }
