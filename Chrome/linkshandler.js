@@ -6,7 +6,7 @@ GetAllData().then(savedData=>{
   let Allinks = savedData[links];
   let shouldObserve = savedData[linkConsent];
 
-    if(Allinks != null && shouldObserve == "hidden"){
+    if(shouldObserve == "hidden"){
         AllLinks = Allinks;
         observeTweets();
     }
