@@ -3,9 +3,7 @@ let cc = "curiouscat";
 let tell = "tellonym.me";
 
 GetAllData().then(savedData=>{
-  // let Allinks = savedData[links];
   let shouldObserve = savedData[linkConsent];
-
     if(shouldObserve == "hidden"){
         observeTweets();
     }
@@ -20,7 +18,6 @@ function findLinks(){
             if(cclink || telllink){
                 if(!location.href.includes("status")){
                 tweet = link.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-                console.log(tweet)
                 hideTweet(tweet);
                 }
             }
