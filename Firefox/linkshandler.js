@@ -3,11 +3,8 @@ let cc = "curiouscat";
 let tell = "tellonym.me";
 
 GetAllData().then(savedData=>{
-  let Allinks = savedData[links];
   let shouldObserve = savedData[linkConsent];
-
-    if(Allinks != null && shouldObserve == "hidden"){
-        AllLinks = Allinks;
+    if(shouldObserve == "hidden"){
         observeTweets();
     }
 })
@@ -21,14 +18,34 @@ function findLinks(){
             if(cclink || telllink){
                 if(!location.href.includes("status")){
                 tweet = link.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
-                tweet.style.width = "0px";
-                tweet.style.height = "0px";
-                tweet.style.opacity = "0";
+                hideTweet(tweet);
                 }
             }
         }catch(e){
         }
     });
+
+    document.querySelectorAll(`[data-testid="tweet"] [data-testid="tweetText"] a[href*="https://t.co/"]`).forEach(link =>{
+      try{
+          let tweetContent = link.innerHTML;
+          let cclink = tweetContent.includes(cc);
+          let telllink = tweetContent.includes(tell);
+          
+          if(cclink || telllink){
+            if(!location.href.includes("status")){
+              tweet = link.parentNode.parentNode.parentNode.parentNode;
+              hideTweet(tweet);
+            }
+        }
+      }catch(e){
+      }
+  });
+}
+
+function hideTweet(tweet){
+  tweet.style.width = "0px";
+  tweet.style.height = "0px";
+  tweet.style.opacity = "0";
 }
 
 function observeTweets(){
