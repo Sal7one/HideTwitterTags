@@ -7,8 +7,9 @@ let explore = "explore";
 let topics = "topics";
 let communities = "communities";
 let links = "links";
+let linkConsent = "linkConsent";
 let savedData =  [search, tags, whotofollow, relventppl, footer, explore, 
- topics, communities, links];
+ topics, communities, links, linkConsent];
 
 function GetAllData() {
     return new Promise(function (resolve, _reject) {
