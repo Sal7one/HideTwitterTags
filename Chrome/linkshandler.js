@@ -15,7 +15,6 @@ GetAllData().then(savedData=>{
 function findLinks(){
   document.querySelectorAll(`[data-testid="tweet"] a[href*="https://t.co/"]`).forEach(link =>{
         try{
-            console.log(link.children[0].children[0].children[0].children[0])
             let tweetLink = link.children[0].children[0].children[0].children[0].innerHTML
             let cclink = tweetLink.includes(cc);
             let telllink = tweetLink.includes(tell);
