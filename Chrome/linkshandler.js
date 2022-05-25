@@ -1,5 +1,6 @@
 
 let cc = "curiouscat";
+let tell = "tellonym.me";
 
 GetAllData().then(savedData=>{
   let Allinks = savedData[links];
@@ -14,14 +15,17 @@ GetAllData().then(savedData=>{
 function findLinks(){
   document.querySelectorAll(`[data-testid="tweet"] a[href*="https://t.co/"]`).forEach(link =>{
         try{
-            let cclink = link.children[0].children[0].children[0].children[0].innerHTML.includes(cc)
-            if(cclink){
+            console.log(link.children[0].children[0].children[0].children[0])
+            let tweetLink = link.children[0].children[0].children[0].children[0].innerHTML
+            let cclink = tweetLink.includes(cc);
+            let telllink = tweetLink.includes(tell);
+            if(cclink || telllink){
                 if(!location.href.includes("status")){
                 tweet = link.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
                 tweet.style.width = "0px";
                 tweet.style.height = "0px";
                 tweet.style.opacity = "0";
-            }
+                }
             }
         }catch(e){
         }
