@@ -4,10 +4,10 @@
   .hidertext {
     display: inline-block;
     font-size: 16px;
-    color: #f2fdff;
+    color: #d4dcde;
   }
   .salslist {
-    min-width: 375px;
+    min-width: 385px;
     text-align: center;
     padding: 5px;
     border-color: rgb(0, 0, 0);
@@ -22,7 +22,8 @@
   }
   body.hiderbody {
     min-width: 420px;
-    background-color: #78a8aa;
+    max-height: 500px;
+    background-color: #145759;
   }
   .switch {
     display: inline-block;
@@ -84,4 +85,11 @@
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .github{
+    outline: none;
+    color: rgb(224, 224, 223);
+    font-size: small;
+    font-family: cursive;
   }
