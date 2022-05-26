@@ -19,6 +19,7 @@ function findLinks(){
                 if(!location.href.includes("status")){
                 tweet = link.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
                 hideTweet(tweet);
+                hideborder(tweet.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode);
                 }
             }
         }catch(e){
@@ -35,6 +36,7 @@ function findLinks(){
             if(!location.href.includes("status")){
               tweet = link.parentNode.parentNode.parentNode.parentNode;
               hideTweet(tweet);
+              hideborder(tweet.parentNode.parentNode.parentNode.parentNode);
             }
         }
       }catch(e){
@@ -46,6 +48,9 @@ function hideTweet(tweet){
   tweet.style.width = "0px";
   tweet.style.height = "0px";
   tweet.style.opacity = "0";
+}
+function hideborder(tweet){
+  tweet.style.setProperty('border', 'transparent 0px', 'important');
 }
 
 function observeTweets(){
