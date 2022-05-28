@@ -13,8 +13,8 @@ Hide Twitter Tags Trends and elements (All languages)
  ⭐ Relevant people.<br>
  ⭐ Footer.<br>
  ⭐ Search <br>
- ⭐ Explore Button 
- ⭐ Communities Button
+ ⭐ Explore Button <br>
+ ⭐ Communities Button<br>
  ⭐ Circours cat and Tellonym Tweets
 
 </ul>
