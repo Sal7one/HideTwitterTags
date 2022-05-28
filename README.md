@@ -8,15 +8,18 @@ Hide Twitter Tags Trends and elements (All languages)
     🌠 Hide:
  
  ⭐ Trends and Tags.<br>
- ⭐Topics to follow.<br>
+ ⭐ Topics to follow.<br>
  ⭐ Who to follow.<br>
  ⭐ Relevant people.<br>
  ⭐ Footer.<br>
- ⭐ Search (Shown by default)<br>
- ⭐ Explore Button (Shown by default) 
+ ⭐ Search <br>
+ ⭐ Explore Button 
+ ⭐ Communities Button
+ ⭐ Circours cat and Tellonym Tweets
+
 </ul>
 
-![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscreenshot.png?raw=true)
+![Screenshot](https://github.com/Sal7one/HideTwitterTags/blob/master/newscc.png?raw=true)
 
 # How to use
 
